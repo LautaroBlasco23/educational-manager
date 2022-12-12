@@ -3,5 +3,6 @@ export default interface StudentEntity {
   firstName: string
   lastName: string
   email: string
-  listOfCourses: string
+  listOfCourses: Array<string>
+  password: string
 } 

@@ -18,6 +18,14 @@ class ProfessionalValue implements ProfessionalEntity {
     this.listOfCourses = [];
   }
 
+  public appendNewCourse(courseId: string){
+    this.listOfCourses.push(courseId);
+  }
+
+  public removeCourse(courseId: string){
+    this.listOfCourses.splice(this.listOfCourses.indexOf(courseId),1);
+  }
+
 };
 
 export default ProfessionalValue;

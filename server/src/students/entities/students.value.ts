@@ -16,6 +16,14 @@ class StudentValue implements StudentEntity {
     this.listOfCourses = [];
     this.password = password;
   }
+
+  public appendNewCourse(courseId: string){
+    this.listOfCourses.push(courseId);
+  }
+
+  public removeCourse(courseId: string){
+    this.listOfCourses.splice(this.listOfCourses.indexOf(courseId),1);
+  }
 }
 
 export default StudentValue;

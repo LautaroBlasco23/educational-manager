@@ -1,4 +1,4 @@
-import {StudentsDatabaseRepository} from "./student.mock.db";
+import {StudentsDatabaseRepository} from "../student.mock.db";
 import StudentsUseCases from "../../students/application/students.usecases";
 import ErrorEntity from "../../error/entities/error.entity";
 

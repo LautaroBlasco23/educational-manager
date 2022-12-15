@@ -1,4 +1,4 @@
-class authValue {
+class AuthValue {
   token: string;
 
   // Entity can be one of ["professional, student, institution"]
@@ -15,3 +15,5 @@ class authValue {
     return false
   }
 }
+
+export default AuthValue;

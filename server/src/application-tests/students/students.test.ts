@@ -1,6 +1,5 @@
-import {StudentsDatabaseRepository} from "../student.mock.db";
+import {StudentsDatabaseRepository} from "../mock.db";
 import StudentsUseCases from "../../students/application/students.usecases";
-import ErrorEntity from "../../error/entities/error.entity";
 
 // app created to test the business logic logic of students App
 const studentsApp = new StudentsUseCases(StudentsDatabaseRepository);

@@ -1,8 +1,7 @@
 // ============================================================== \\
 // YOU CAN CHANGE THIS FILE TO USE THE MOCKED DATABASE YOU WANT   \\
 // ============================================================== \\
-import AuthEntity from "../auth/entities/auth.entity";
-import ErrorEntity from "../error/entities/error.entity";
+import AuthValue from "../auth/entities/auth.value";
 import CoursesEntity from "../courses/entities/courses.entity";
 import StudentEntity from "../students/entities/students.entity";
 import ProfessionalEntity from "../professionals/entities/professionals.entity";
@@ -70,7 +69,7 @@ export const AuthDatabaseRepository: AuthRepository = {
         for (let i = 0; i < InstitutionsDatabase.length; i++){
           if (InstitutionsDatabase[i].email == email && InstitutionsDatabase[i].password == password) {
             const {institutionId, name} = InstitutionsDatabase[i];
-            const token = new authValue({
+            const token = new AuthValue({
               id: institutionId,
               name: name,
               entity
@@ -85,7 +84,7 @@ export const AuthDatabaseRepository: AuthRepository = {
         for (let i = 0; i < ProfessionalsDatabase.length; i++){
           if (ProfessionalsDatabase[i].email == email && ProfessionalsDatabase[i].password == password) {
             const {professionalId, firstName} = ProfessionalsDatabase[i];
-            const token = new authValue({
+            const token = new AuthValue({
               id: professionalId,
               name: firstName,
               entity
@@ -100,7 +99,7 @@ export const AuthDatabaseRepository: AuthRepository = {
         for (let i = 0; i < StudentsDataBase.length; i++){
           if (StudentsDataBase[i].email == email && StudentsDataBase[i].password == password) {
             const {studentId, firstName} = StudentsDataBase[i];
-            const token = new authValue({
+            const token = new AuthValue({
               id: studentId,
               name: firstName,
               entity
@@ -138,7 +137,7 @@ export const AuthDatabaseRepository: AuthRepository = {
 
     if (newEntityId === null) return {code: 500, message: "error creating entity"};
 
-    const auth = new authValue({id: `${newEntityId}`, name, entity});
+    const auth = new AuthValue({id: `${newEntityId}`, name, entity});
 
     return {token: auth.getToken(), id: `${newEntityId}`};
   },

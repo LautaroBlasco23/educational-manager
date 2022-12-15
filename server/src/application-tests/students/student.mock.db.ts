@@ -3,7 +3,7 @@ import StudentRepository from "../../students/entities/students.repository";
 
 const StudentsDataBase: Array<StudentEntity> = [];
 
-const DatabaseRepository: StudentRepository = {
+export const StudentsDatabaseRepository: StudentRepository = {
   getAllStudents() {
       return StudentsDataBase;
   },
@@ -45,4 +45,3 @@ const DatabaseRepository: StudentRepository = {
   },
 }
 
-export default DatabaseRepository;

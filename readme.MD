@@ -2,10 +2,10 @@
 
 **Usefull Commands**
 
-* npm install -> install al dependencies. 
+* npm install -> install all dependencies. 
 * npm dev -> Development mode (console logs errors and restart server on any file change).
 * npm test -> Run the test of "application-tests" folder.
-* npm build -> run tsc to compile all typescript files.
+* npm build -> install all dependencies and compiles all typescript files.
 * npm start -> runs the node server.
 
 **entities:**
